@@ -38,7 +38,7 @@ jobs:
       - name: 🚀 Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'weather-wardrobe'
+          app-name: 'weather-wardrobe-linux'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1B7121C018284024B134A6A2817543C1 }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
           package: ./backend
