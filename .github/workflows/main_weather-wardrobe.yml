@@ -25,9 +25,10 @@ jobs:
 
       - name: ⚙️ Build React app
         run: |
-          npm run build
+          rm -rf ../backend/frontend
           mkdir -p ../backend/frontend
-          mv build ../backend/frontend/
+          npm run build
+          mv build/* ../backend/frontend/
         working-directory: ./frontend
 
       - name: 📦 Install backend dependencies
