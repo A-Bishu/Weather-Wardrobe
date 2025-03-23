@@ -41,7 +41,8 @@ jobs:
         with:
           app-name: weather-wardrobe  # ✅ your app name
           slot-name: production
-          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_379E0CE115104B8187FE2A741E93E9D1 }}
+
           package: ./backend
 
 
