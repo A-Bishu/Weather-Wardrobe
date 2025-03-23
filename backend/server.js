@@ -132,6 +132,23 @@ app.get('/restaurants-activities/:location', async (req, res) => {
   }
 });
 
+// Serve React frontend
+
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Serve static frontend files
+app.use(express.static(path.join(__dirname, 'frontend/build')));
+
+// Catch-all route for frontend (MUST come after API routes)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'));
+});
+
+
 app.listen(PORT, () => {
   console.log(`Server listening at http://localhost:${PORT}`);
 });
