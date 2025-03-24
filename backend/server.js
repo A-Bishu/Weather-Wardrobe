@@ -13,8 +13,13 @@ const openai = new OpenAI({
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(express.json());
+
 app.use(cors({ origin: '*' }));
+app.use(express.json());
+
+app.get('/recommendations/:location', (req, res) => {
+  res.send({ message: 'Hello from backend!' });
+});
 
 async function fetchWeatherData(location, units = 'imperial') {
   const apiKey = process.env.WEATHER_API_KEY;
