@@ -61,4 +61,4 @@ jobs:
           app-name: 'weatherwardrobe'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DCD8A601A7C34675BD118F218BADA8F3 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5359766F81814630B420223664E90E1E }}
