@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors({ origin: '*' }));
 app.use(express.json());
 
-app.get('/recommendations/:location', (req, res) => {
+app.get('/recommendation/:location', (req, res) => {
   res.send({ message: 'Hello from backend!' });
 });
 
