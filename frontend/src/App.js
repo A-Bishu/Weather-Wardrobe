@@ -97,7 +97,7 @@ function App() {
     setIsLoading(true);
 
     try {
-      const response = await axios.get(`http://localhost:5000/recommendations/${location}?units=${units}`);
+      const response = await axios.get(`https://weather-wardrobe-d8hnh5dvafdjb6ch.centralus-01.azurewebsites.net/recommendations/${location}?units=${units}`);
       const data = response.data;
       setWeatherData(data.weather);
       setClothingRecommendation(data.clothingRecommendation);
@@ -119,7 +119,7 @@ function App() {
     setIsLoading(true);
 
     try {
-      const response = await axios.get(`http://localhost:5000/restaurants-activities/${location}`);
+      const response = await axios.get(`https://weather-wardrobe-d8hnh5dvafdjb6ch.centralus-01.azurewebsites.net/restaurants-activities/${location}`);
       const data = response.data;
       setRestaurants(data.restaurants);
       setActivities(data.activities);
